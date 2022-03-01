@@ -1,11 +1,8 @@
 import PokemonsList from "../../components/PokemonsList";
 
-const PokemonsListSsr = ({ pokemonsAPI }) => {
+const PokemonsListIsr = ({ pokemonsAPI }) => {
   return (
     <>
-      <h1 className="text-center mt-3 mb-3">
-        Server Side Rendering (mypokeapi)
-      </h1>
       {!pokemonsAPI.length && (
         <div className="d-flex flex-column justify-content-center align-items-center">
           <h2 className="text-center mt-4 mb-2 text-danger">
@@ -20,18 +17,22 @@ const PokemonsListSsr = ({ pokemonsAPI }) => {
           </a>
         </div>
       )}
+      <h1 className="text-center mt-3 mb-3">
+        Incremental Static Regeneration (mypokeapi)
+      </h1>
       <PokemonsList pokemons={pokemonsAPI} />
     </>
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch(process.env.NEXT_MY_POKE_API_URL);
   const pokemonsAPI = await response.json();
 
   return {
     props: { pokemonsAPI },
+    revalidate: 20,
   };
 };
 
-export default PokemonsListSsr;
+export default PokemonsListIsr;

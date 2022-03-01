@@ -18,7 +18,7 @@ const PokemonsListSsg = ({ pokemonsAPI }) => {
         </div>
       )}
       <h1 className="text-center mt-3 mb-3">
-        Site Static Generator (mypokeapi)
+        Static Site Generation (mypokeapi)
       </h1>
       <PokemonsList pokemons={pokemonsAPI} />
     </>
