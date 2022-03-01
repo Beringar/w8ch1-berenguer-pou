@@ -33,26 +33,44 @@ const Navigation = () => {
               </li>
               <li>
                 <Link href="/list-csr">
-                  <a className="nav-link px-2 menu__item__link">Pokémon</a>
+                  <a
+                    className={`nav-link px-2 menu__item__link ${
+                      router.pathname == "/list-csr" ? "active" : ""
+                    }`}
+                  >
+                    Pokémon
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href="/list-ssr">
-                  <a className="nav-link px-2 menu__item__link">
+                  <a
+                    className={`nav-link px-2 menu__item__link ${
+                      router.pathname == "/list-ssr" ? "active" : ""
+                    }`}
+                  >
                     Mis Pokémon SSR
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/list-ssg">
-                  <a className="nav-link px-2 menu__item__link">
+                  <a
+                    className={`nav-link px-2 menu__item__link ${
+                      router.pathname == "/list-ssg" ? "active" : ""
+                    }`}
+                  >
                     Mis Pokémon SSG
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/list-isr">
-                  <a className="nav-link px-2 menu__item__link">
+                  <a
+                    className={`nav-link px-2 menu__item__link ${
+                      router.pathname == "/list-isr" ? "active" : ""
+                    }`}
+                  >
                     Mis Pokémon ISR
                   </a>
                 </Link>

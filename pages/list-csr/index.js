@@ -21,7 +21,7 @@ const PokemonsListCsr = () => {
 
   return (
     <>
-      <h1 className="text-center mt-2 mb-3">
+      <h1 className="text-center mt-4 mb-3">
         Client Side Rendering (public PokeAPI)
       </h1>
       {pokemons && <PokemonsList pokemons={pokemons} />}
