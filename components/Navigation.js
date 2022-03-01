@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import logoPicture from "../public/img/logo.png";
+
 const Navigation = () => {
+  const router = useRouter();
   return (
     <>
       <header className="header p-3 bg-dark text-white">
@@ -18,8 +21,14 @@ const Navigation = () => {
 
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
-                <Link href="/home">
-                  <a className="nav-link px-2 menu__item__link">Home</a>
+                <Link href="/">
+                  <a
+                    className={`nav-link px-2 menu__item__link ${
+                      router.pathname == "/" ? "active" : ""
+                    }`}
+                  >
+                    Home
+                  </a>
                 </Link>
               </li>
               <li>
