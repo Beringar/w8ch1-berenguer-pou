@@ -1,0 +1,151 @@
+@import "variables";
+@import "extends";
+@import "mixins";
+@import "bootstrap/scss/bootstrap.scss";
+
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+
+body {
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+.pokemon-detail {
+  &__value {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  &__form {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffc107de;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+    align-items: stretch;
+    justify-content: center;
+    &--visible {
+      visibility: visible;
+    }
+  }
+
+  &__grid {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      padding: 6px;
+      background-color: cadetblue;
+      color: rgb(60, 60, 60);
+      text-align: center;
+      width: 120px;
+      height: 120px;
+
+      &:nth-child(1) {
+        background-color: #9bc53d;
+      }
+      &:nth-child(2) {
+        background-color: #c3423f;
+        color: white;
+      }
+      &:nth-child(3) {
+        background-color: #211a1e;
+        color: white;
+      }
+      &:nth-child(4) {
+        background-color: #fde74c;
+      }
+      &:nth-child(5) {
+        background-color: #5bc0eb;
+      }
+      &:nth-child(6) {
+        background-color: #778da9;
+      }
+      &:nth-child(7) {
+        background-color: #eec584;
+      }
+      &:nth-child(8) {
+        background-color: #26532b;
+        color: white;
+      }
+      &:nth-child(9) {
+        background-color: #ce4760;
+        color: white;
+      }
+      &:nth-child(10) {
+        background-color: #4d5061;
+        color: white;
+      }
+      &:nth-child(11) {
+        background-color: #96031a;
+        color: white;
+      }
+    }
+  }
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.menu {
+  &__logo {
+    height: 50px;
+    padding-right: 8px;
+  }
+  &__item {
+    &__link {
+      color: #2fceff;
+      &--current {
+        color: #ffe100;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.communications {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  right: 100vw;
+  left: -100vw;
+  justify-content: center;
+  &__text {
+    font-size: 2rem;
+    color: white;
+  }
+}
+.communications.on {
+  right: 0;
+  left: 0;
+  background-color: #007bff;
+}
