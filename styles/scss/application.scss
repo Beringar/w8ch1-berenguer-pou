@@ -115,11 +115,11 @@ body {
   &__item {
     &__link {
       color: #2fceff;
-      &--current {
-        color: #ffe100;
-      }
       &:hover {
         color: white;
+      }
+      &.active {
+        color: yellow;
       }
     }
   }
