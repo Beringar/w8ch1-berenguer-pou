@@ -20,7 +20,7 @@ const PokemonsListSsr = ({ pokemonsAPI }) => {
           </a>
         </div>
       )}
-      <PokemonsList pokemons={pokemonsAPI} />
+      <PokemonsList pokemons={pokemonsAPI} link={true} />
     </>
   );
 };
