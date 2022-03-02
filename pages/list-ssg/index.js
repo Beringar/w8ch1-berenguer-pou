@@ -20,7 +20,7 @@ const PokemonsListSsg = ({ pokemonsAPI }) => {
       <h1 className="text-center mt-3 mb-3">
         Static Site Generation (mypokeapi)
       </h1>
-      <PokemonsList pokemons={pokemonsAPI} />
+      <PokemonsList pokemons={pokemonsAPI} link={true} />
     </>
   );
 };

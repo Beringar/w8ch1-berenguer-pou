@@ -20,7 +20,7 @@ const PokemonsListIsr = ({ pokemonsAPI }) => {
       <h1 className="text-center mt-3 mb-3">
         Incremental Static Regeneration (mypokeapi)
       </h1>
-      <PokemonsList pokemons={pokemonsAPI} />
+      <PokemonsList pokemons={pokemonsAPI} link={true} />
     </>
   );
 };
